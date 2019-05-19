@@ -4,9 +4,9 @@ var https = require("https");
 module.exports.Search = function (text, familysearch = false, callback) {
     var url;
     if (familysearch) {
-        url = "https://www.yandex.com/images/search?text=" + text + "&family=yes";
+        url = "https://yandex.com.tr/gorsel/search?text=" + text + "&family=yes";
     } else {
-        url = "https://www.yandex.com/images/search?text=" + text;
+        url = "https://yandex.com.tr/gorsel/search?text=" + text;
     }
     https.get(url, (res) => {
         var body = "";
